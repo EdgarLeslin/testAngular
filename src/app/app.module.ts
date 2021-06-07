@@ -1,0 +1,25 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { HttpClientModule } from "@angular/common/http";
+
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { CardComponent } from './card/card.component';
+import { SERVER_DATA } from '@views/service/service';
+import { ErrorService } from '@views/service/error.service';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    CardComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule
+  ],
+  providers: [SERVER_DATA, ErrorService],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
